@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  redis:
+    image: redis
+    container_name: restapi
+    ports:
+      - "6379:6379"
+  app:
+    build: ./app/
+    links:
+      - redis
+    depends_on:
+      - redis
+    ports:
+      - 3000:3000
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      REDIS_HOST: restapi
+      REDIS_PORT: 6379
