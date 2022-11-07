@@ -47,7 +47,7 @@ jobs:
         with:
           context: ./app/
           tags: |
-            ghcr.io/plcautomation/branchName/restkeyvalue:latest
+            ghcr.io/plcautomation/main/restkeyvalue:latest
           # build on feature branches, push only on main branch
           push: true
 
