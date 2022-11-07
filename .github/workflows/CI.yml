@@ -49,7 +49,7 @@ jobs:
           tags: |
             ghcr.io/plcautomation/main/restkeyvalue:latest
           # build on feature branches, push only on main branch
-          push: true
+          push: false
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
